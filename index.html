@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container">
+    <cu-collapse>
+      <cu-collapse-item name = "1" title = "测试1">
+        11111
+      </cu-collapse-item>
+      <cu-collapse-item name = "2" title = "测试2">
+        3333
+      </cu-collapse-item>
+      <cu-collapse-item name = "3" title = "测试3">
+        4444
+      </cu-collapse-item>
+    </cu-collapse>
+  </div>
+
+  <!-- 模板 -->
+  <template id = "cu-collapse">
+    <div class="cu-collapse">
+      <h2>
+        默认标题
+      </h2>
+      <ul>
+        <slot></slot>
+      </ul>
+    </div>
+  </template>
+  <template id = "cu-collapse-item">
+    <li class="detail">
+      <p class="title"></p>
+      <div class="content">
+        <slot>默认值</slot>
+      </div>
+    </li>
+  </template>
+  <script type="module" src="./components/index.js"></script>
+</body>
+</html>
